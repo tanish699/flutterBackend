@@ -1,0 +1,37 @@
+
+* Request → What you ask
+* Response → What you get back
+
+GET https://api.com/users. --> Request asking for users
+
+[
+  {"name": "Tanish", "age": 20} ------> Response
+]
+
+---------------------------------------------------
+
+URL anatomy:
+https://api.example.com/users/42
+|_____|  |_____________| |________|
+ scheme     host (domain)   path (endpoint)
+
+Real examples:
+https://jsonplaceholder.typicode.com/posts        → all posts
+https://jsonplaceholder.typicode.com/posts/1      → post #1
+https://jsonplaceholder.typicode.com/users        → all users
+
+-----------------------------------------------------
+HTTP Methods
+
+1. GET (Fetch data)
+    await http.get(url);
+
+2. POST (Send data)
+   await http.post(url, body: {...});
+
+3. PUT / PATCH (Update)
+   * PUT → replace entire data
+   * PATCH → update part
+
+4 DELETE (delete data)
+
