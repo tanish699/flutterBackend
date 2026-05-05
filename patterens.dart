@@ -5,14 +5,20 @@ import 'dart:convert';
 // LAYER 1: MODEL — describes the data shape
 // Analogy: The menu card item — just description, no logic
 // ════════════════════════════════════════
+
+
 class Post {
   final int id;
   final String title;
   final String body;
   final int userId;
 
-  const Post({required this.id, required this.title,
-               required this.body, required this.userId});
+  const Post({
+    required this.id,
+    required this.title,
+    required this.body,
+    required this.userId
+  });
 
   factory Post.fromJson(Map<String, dynamic> json) => Post(
     id:     json['id'],
@@ -22,7 +28,10 @@ class Post {
   );
 
   Map<String, dynamic> toJson() => {
-    'id': id, 'title': title, 'body': body, 'userId': userId
+    'id': id, 
+    'title': title, 
+    'body': body, 
+    'userId': userId
   };
 
   @override
